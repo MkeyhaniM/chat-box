@@ -1,5 +1,11 @@
-import Image from "next/image";
+import {NavbarHome} from "@/src/components";
+
+import "./globals.css";
 
 export default function Home() {
-  return <h1>chat box</h1>;
+  return (
+    <section className="bg-black">
+      <NavbarHome />
+    </section>
+  );
 }
