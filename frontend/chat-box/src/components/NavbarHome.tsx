@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
 import {Audiowide, Barlow} from "next/font/google";
 import {NextFont} from "next/dist/compiled/@next/font";
 
 import {Github, Linkedin, Medium, Menu, X} from "../icons";
+import {useState} from "react";
 
 const audiowide: NextFont = Audiowide({
   subsets: ["latin"],
@@ -15,15 +18,19 @@ const barlow: NextFont = Barlow({
 });
 
 const NavbarHome = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className="flex justify-between p-5 md:hidden items-center">
         <h3 className={`${audiowide.className} text-2xl text-white`}>Chat Box Ai</h3>
-        <div>
+        <div onClick={() => setIsOpen(!isOpen)}>
           <Menu />
         </div>
       </div>
-      <div className="text-white flex flex-col md:flex-row w-full -translate-x-[500px] md:w-full md:translate-x-0 justify-around h-svh md:max-h-[80px] md:justify-between lg:justify-around md:p-4 lg:pt-10 items-center">
+      <div
+        className={`text-white flex flex-col md:flex-row w-full ${isOpen ? "-translate-x-[0]" : "-translate-x-[500px]"} md:w-full md:translate-x-0 justify-around h-svh md:max-h-[80px] md:justify-between lg:justify-around md:p-4 lg:pt-10 items-center`}
+      >
         <h3 className={`${audiowide.className} hidden md:block text-base md:text-base lg:text-2xl`}>
           Chat Box Ai
         </h3>
