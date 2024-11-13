@@ -1,18 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import {Audiowide, Barlow} from "next/font/google";
+import {Audiowide, Julius_Sans_One} from "next/font/google";
 import {NextFont} from "next/dist/compiled/@next/font";
+import {useState} from "react";
 
 import {Github, Linkedin, Medium, Menu, X} from "../icons";
-import {useState} from "react";
 
 const audiowide: NextFont = Audiowide({
   subsets: ["latin"],
   weight: "400",
 });
 
-const barlow: NextFont = Barlow({
+const barlow: NextFont = Julius_Sans_One({
   subsets: ["latin"],
   weight: "400",
 });
