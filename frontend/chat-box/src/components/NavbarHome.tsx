@@ -12,7 +12,7 @@ const audiowide: NextFont = Audiowide({
   weight: "400",
 });
 
-const barlow: NextFont = Julius_Sans_One({
+const JuliusSansOne: NextFont = Julius_Sans_One({
   subsets: ["latin"],
   weight: "400",
 });
@@ -35,7 +35,7 @@ const NavbarHome = () => {
           Chat Box Ai
         </h3>
         <div
-          className={`${barlow.className} text-xl md:text-base lg:text-xl flex gap-4 flex-col md:flex-row`}
+          className={`${JuliusSansOne.className} text-xl md:text-base lg:text-xl flex gap-4 flex-col md:flex-row`}
         >
           <Link href={"/"}>Contact us</Link>
           <Link href={"/"}>About us</Link>
