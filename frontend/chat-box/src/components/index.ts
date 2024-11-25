@@ -1,3 +1,4 @@
 import NavbarHome from "./NavbarHome";
+import ManageDeshboard from "./ManageDeshboard";
 
-export {NavbarHome};
+export {NavbarHome, ManageDeshboard};
